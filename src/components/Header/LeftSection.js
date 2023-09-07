@@ -2,11 +2,13 @@ import React from 'react';
 import { styled } from 'styled-components';
 import { FaChildren } from "react-icons/fa6";
 import { FaFemale, FaMale } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const Ul = styled.ul`
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
+  align-items: center;
   font-weight: 600;
   margin: 0;
   cursor: pointer;
@@ -31,7 +33,7 @@ const Ul = styled.ul`
     padding: 0;
     padding-top: 3.5rem;
     transition: transform 0.3s ease-in-out;
-    li {
+    li{
       margin: auto;
       display: flex;
         flex-direction: column;
@@ -45,9 +47,9 @@ const LeftSection = ({open}) => {
 
     return (
         <Ul open={open}>
-            <li><FaMale style={{height: '20px', width: '20px'}}/>Men</li>
-            <li><FaFemale style={{height: '20px', width: '20px'}}/>Women</li>
-            <li><FaChildren style={{height: '25px', width: '25px', marginRight: '3px'}}/>Kids</li>
+            <Link to="/product"><li><FaMale style={{height: '20px', width: '20px'}}/>Men</li></Link>
+            <Link to="/product"><li><FaFemale style={{height: '20px', width: '20px'}}/>Women</li></Link>
+            <Link to="/product"><li><FaChildren style={{height: '25px', width: '25px', marginRight: '3px'}}/>Kids</li></Link>
         </Ul>
     );
 };

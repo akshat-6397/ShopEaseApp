@@ -1,0 +1,127 @@
+.product-page{
+    padding-top: 60px;
+    display: flex;
+
+    .filter-section{
+        width: 18vw;
+        margin-top: 20px;
+        height: 80vh;
+        padding: 20px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        .top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h3{
+                margin: 0;
+                padding: 0;
+            }
+
+            button{
+                cursor: pointer;
+                border: 1px solid #0083b0;
+                color:#0083b0;
+                padding: 10px 20px;
+                height: 35px;
+                border-radius:20px;
+                background-color: #ffffff;
+                &:hover{
+                    background-color: #0083b0;
+                    color: white;
+                }
+            }
+            
+        }
+        hr{
+            opacity: 0.2;
+            margin: 20px 0;
+        }
+
+        .middle{
+            h4{
+                margin: 0;
+                padding: 0;
+                margin-bottom: 20px;
+            }
+            .men {
+                margin-top: 10px;
+                display: flex;
+                align-items: center;
+                input{
+                    height:15px;
+                    width: 15px;
+                    cursor: pointer;
+                }
+                span{
+                    font-size: 14px;
+                    margin-left: 10px;
+                }
+            }
+        }
+        .low-middle{
+            .price-range{
+                display: flex;
+                justify-content: space-between;
+            }
+            input{
+                width: 95%;
+                background: #0083b0;
+            }
+        }
+        .bottom{
+            h4{
+                margin: 0;
+                padding: 0;
+                margin-bottom: 20px;
+            }
+            .rating{
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+                span{
+                    font-size: 14px;
+                    margin-left: 10px;
+                }
+                input{
+                    width: 15px;
+                    height: 15px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .product-listing{
+        width: 80vw;
+        .top-component{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+
+            h3{
+                margin: 0;
+                padding: 0;
+            }
+            .dropdown{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                h5{
+                    margin: 0;
+                    padding: 0;
+                    margin-right: 10px;
+                }
+                select{
+                    border: 1px solid #0083b0;
+                    width: 190px;
+                    height: 30px;
+                    color: #0083b0;
+                    cursor: pointer;
+                    
+                }
+            }
+        }
+    }
+}
