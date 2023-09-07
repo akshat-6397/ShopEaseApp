@@ -2,6 +2,9 @@
   display: flex;
   justify-content: space-between;
   height: 60px;
+  position: fixed;
+  background-color: #ffffff;
+  width: 100vw;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
@@ -43,6 +46,7 @@
 }
 .login-card-wrapper{
     display: flex;
+    margin-top: 60px;
     width: 100vw;
     justify-content: flex-end;
     transition: all 0.3s linear;

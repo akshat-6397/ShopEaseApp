@@ -1,4 +1,5 @@
 .body {
+    padding-top: 60px;
   .sale-banner {
     display: flex;
     align-items: center;
@@ -19,30 +20,115 @@
       width: 100%;
     }
   }
-  .hr-1{
+  .hr-1 {
     height: 12px;
     border: 0;
     box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
   }
-  .hr-2{
+  .hr-2 {
     border: 0;
     border-bottom: 1px dashed #ccc;
     background: #999;
     margin-top: 20px;
   }
 
-  .category-banner{
+  .category-banner {
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
-    h1{
-        margin: 10px 0;
-        padding: 0;
+    h1 {
+      margin: 10px 0;
+      padding: 0;
     }
 
-    @media (max-width: 768px){
-        font-size: 12px;
+    @media (max-width: 768px) {
+      font-size: 12px;
+    }
+  }
+  .banners {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    @media (min-width: 768px){
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .men-banner {
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+      img {
+        height: 300px;
+        width: 80vw;
+        padding: 10px 10px;
+        border: 8px solid #0083b0;
+        border-image: repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 5px,
+            #0083b0 6px,
+            #0083b0 15px,
+            transparent 16px,
+            transparent 20px
+          )
+          20/1rem;
+          @media(min-width: 768px){
+            width: 250px;
+            height: 250px;
+          }
+      }
+    }
+    .women-banner {
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+      img {
+        height: 300px;
+        width: 80vw;
+        padding: 10px 10px;
+        border: 8px solid #0083b0;
+        border-image: repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 5px,
+            #0083b0 6px,
+            #0083b0 15px,
+            transparent 16px,
+            transparent 20px
+          )
+          20/1rem;
+          @media(min-width: 768px){
+            width: 250px;
+            height: 250px;
+          }
+      }
+    }
+    .kids-banner {
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+      img {
+        height: 300px;
+        width: 80vw;
+        padding: 10px 10px;
+        border: 8px solid #0083b0;
+        border-image: repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 5px,
+            #0083b0 6px,
+            #0083b0 15px,
+            transparent 16px,
+            transparent 20px
+          )
+          20/1rem;
+          @media(min-width: 768px){
+            width: 250px;
+            height: 250px;
+          }
+      }
     }
   }
 }
