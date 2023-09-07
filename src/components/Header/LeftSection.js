@@ -19,10 +19,10 @@ const Ul = styled.ul`
 
   @media (max-width: 768px) {
     flex-flow: column nowrap;
-    border: 1px solid black;
+    ${'' /* border: 1px solid black; */}
     background: linear-gradient(to right, #00b4db, #0083b0);
     position: fixed;
-    transform: ${({open}) => open ? 'translateX(b0)':'translateX(-110%)'};
+    transform: ${({open}) => open ? 'translateX(0)':'translateX(-110%)'};
     top: 0;
     ${'' /* right: 0; */}
     height: 50vh;
