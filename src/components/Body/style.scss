@@ -1,5 +1,5 @@
 .body {
-    padding-top: 60px;
+  padding-top: 60px;
   .sale-banner {
     display: flex;
     align-items: center;
@@ -13,11 +13,23 @@
     }
   }
   .ad-banner {
+    display: flex;
+    justify-content: center;
     margin-top: 20px;
     padding: 10px;
-    img {
-      height: 200px;
-      width: 100%;
+    .mobile-banner {
+        height: 200px;
+        width: 100%;
+        @media (min-width: 768px){
+            display: none;
+        }
+    }
+    .desktop-banner {
+        height: 400px;
+        width: 80vw;
+        @media(max-width: 768px){
+            display: none;
+        }
     }
   }
   .hr-1 {
@@ -49,8 +61,8 @@
   .banners {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    @media (min-width: 768px){
-        grid-template-columns: repeat(3, 1fr);
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
     }
     .men-banner {
       padding: 10px;
@@ -72,10 +84,10 @@
             transparent 20px
           )
           20/1rem;
-          @media(min-width: 768px){
-            width: 250px;
-            height: 250px;
-          }
+        @media (min-width: 768px) {
+          width: 250px;
+          height: 250px;
+        }
       }
     }
     .women-banner {
@@ -98,10 +110,10 @@
             transparent 20px
           )
           20/1rem;
-          @media(min-width: 768px){
-            width: 250px;
-            height: 250px;
-          }
+        @media (min-width: 768px) {
+          width: 250px;
+          height: 250px;
+        }
       }
     }
     .kids-banner {
@@ -124,10 +136,10 @@
             transparent 20px
           )
           20/1rem;
-          @media(min-width: 768px){
-            width: 250px;
-            height: 250px;
-          }
+        @media (min-width: 768px) {
+          width: 250px;
+          height: 250px;
+        }
       }
     }
   }

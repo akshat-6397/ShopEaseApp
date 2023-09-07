@@ -9,6 +9,7 @@ const Ul = styled.ul`
   flex-flow: row nowrap;
   font-weight: 600;
   margin: 0;
+  cursor: pointer;
 
   li {
     display: flex;

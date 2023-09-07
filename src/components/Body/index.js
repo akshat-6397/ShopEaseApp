@@ -8,8 +8,14 @@ const Body = () => {
       <SaleBanner />
       <div className="ad-banner">
         <img
+            className="mobile-banner"
           alt="banner"
           src="https://static.vecteezy.com/system/resources/previews/000/327/525/original/summer-sale-template-banner-vector-background.jpg"
+        />
+        <img 
+            className="desktop-banner"
+            alt="banner"
+            src="https://s3.envato.com/files/140215562/Preview%20Files/001_1200x628%20copy.jpg"
         />
       </div>
       <hr className="hr-1"></hr>

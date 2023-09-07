@@ -17,11 +17,11 @@ const Header = () => {
         <img className="brandLogo" alt="logo" src={brandLogo} />
         <div className="right-section">
           {/* <div className="cart"><AiOutlineShoppingCart style={{ height: "25px", width: "25px" }} /><span>0</span></div> */}
-          <div className="cart"><AiOutlineShoppingCart style={{ height: "25px", width: "25px" }} /></div>
-          <AiOutlineHeart style={{ height: "25px", width: "25px" }} />
+          <div className="cart"><AiOutlineShoppingCart style={{ height: "25px", width: "25px", cursor: 'pointer' }} /></div>
+          <AiOutlineHeart style={{ height: "25px", width: "25px", cursor: 'pointer' }} />
           <CgProfile
             onClick={() => setIslogin(!islogin)}
-            style={{ height: "25px", width: "25px" }}
+            style={{ height: "25px", width: "25px", cursor: 'pointer' }}
           />
         </div>
       </div>
