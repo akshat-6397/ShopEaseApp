@@ -11,7 +11,7 @@ const ProductPage = () => {
     <div className='product-page'>
         {!isMobile?<FiltersSection />:null}
         <ProductListing />
-        <MobileFilterSection />
+        {isMobile?<MobileFilterSection />:null}
     </div>
   )
 }
