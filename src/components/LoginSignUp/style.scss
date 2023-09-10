@@ -1,0 +1,98 @@
+.login-page-wrapper {
+    padding-top: 60px;
+  .login-page {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    max-width: 400px;
+    margin: auto;
+    margin-top: 30px;
+    @media(max-width: 768px){
+        width: 95vw;
+        margin-top: 10px;
+    }
+    img {
+      height: 200px;
+      width: 100%;
+    }
+    .image-bottom {
+      padding: 20px;
+      h2 {
+        display: flex;
+        justify-content: center;
+        color: #0083b0;
+        margin: 0;
+        padding: 0;
+      }
+      .email {
+        margin-top: 20px;
+        padding: 0 20px;
+        label{
+            font-weight: 500;
+        }
+        input {
+            border: 1px solid lightgray;
+            margin: auto;
+          height: 30px;
+          width: 97%;
+          margin-top: 5px;
+            padding-left: 10px;
+          &:focus{
+            border: 2px solid #0083b0;
+            outline: #0083b0;
+          }
+        }
+      }
+      .password{
+        margin-top: 20px;
+        padding: 0 20px;
+        position: relative;
+        label{
+            font-weight: 500;
+        }
+        input{
+            border: 1px solid lightgray;
+            margin: auto;
+          height: 30px;
+          width: 97%;
+          margin-top: 5px;
+          padding-left: 10px;
+
+          &:focus{
+            border: 2px solid #0083b0;
+            outline: #0083b0;
+          }
+        }
+      }
+      button{
+        width: 90%;
+        color: #ffffff;
+        border: none;
+        border-radius: 10px;
+        background-color: #0083b0;
+        font-weight: bold;
+        padding: 10px 20px; 
+        margin: auto;
+        margin-top: 20px;
+        cursor: pointer;
+        &:hover{
+            background-color: #008;
+        }
+      }
+      .bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 85%;
+        margin: auto;
+
+        span{
+            cursor: pointer;
+            color: #0083b0;
+        }
+      }
+    }
+  }
+}
+
+.signup-page-wrapper{
+    padding-top: 60px;
+}

@@ -4,6 +4,8 @@ import Body from './components/Body';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import ProductPage from './components/ProductPage';
+import Login from './components/LoginSignUp/Login';
+import SignUp from './components/LoginSignUp/SignUp';
 
 function App() {
   const AppLayout = () => {
@@ -27,6 +29,14 @@ function App() {
         path: "/product",
         element: <ProductPage />,
       },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/signup", 
+        element: <SignUp />,
+      }
     ]
   }])
   

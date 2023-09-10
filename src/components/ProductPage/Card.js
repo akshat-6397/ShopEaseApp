@@ -11,7 +11,7 @@ const Card = () => {
   return (
     <div className='card'>
         <div className='image' style={{position: 'relative'}}>
-            {favClick?<AiFillHeart style={{position: 'absolute', right: 10, top: 10, cursor: 'pointer', color: '#0083b0'}} onClick={handleFavClick}/>:<AiOutlineHeart style={{position: 'absolute', right: 10, top: 10, cursor: 'pointer', color: '#0083b0'}} onClick={handleFavClick} />}
+            {favClick?<AiFillHeart style={{position: 'absolute', right: 10, top: 10, cursor: 'pointer', color: 'red'}} onClick={handleFavClick}/>:<AiOutlineHeart style={{position: 'absolute', right: 10, top: 10, cursor: 'pointer', color: 'red'}} onClick={handleFavClick} />}
             <img alt="cardImage" src="https://i.pinimg.com/originals/31/61/e3/3161e377210fd32b4584a080dcdd3e82.jpg"/>
             <div style={{position:'absolute', backgroundColor: '#ffffff', bottom: 15, left: 10, display: 'flex', justifyContent:'center', alignItems: 'center', padding: '2px 3px'}}><AiFillStar style={{color: '#0083b0', size: '5px'}} /><span style={{fontSize: '13px', color: '#0083b0',fontWeight: 'bold' }}>4.4|230</span></div>
         </div>
