@@ -10,7 +10,7 @@ const ProductListing = () => {
       <div className="top-component">
         <h3>SHOPEASE FASHION STORE</h3>
         <div className="search-bar">
-            <BsSearch style={{position: "absolute", left: '5'}}/>
+            <BsSearch style={{position: "absolute", left: '8'}}/>
             <input type="text" placeholder="Search For Products" />
         </div>
         <Dropdown />
