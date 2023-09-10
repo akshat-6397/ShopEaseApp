@@ -20,7 +20,7 @@ const Card = () => {
             <div className='card-label'>
                 <div className='strike-text'>
                     <span>Rs.1627</span>
-                    <s>Rs.2200</s>
+                    <s style={{opacity: '0.7'}}>Rs.2200</s>
                 </div>
                 <label>(26% OFF)</label>
             </div>
