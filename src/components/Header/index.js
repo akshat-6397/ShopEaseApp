@@ -26,7 +26,7 @@ const Header = () => {
         </div>
       </div>
       <div className={`login-card-wrapper ${islogin ? "trans1" : "trans2"}`}>
-        <LoginCard />
+        <LoginCard setIslogin={setIslogin}/>
       </div>
     </>
   );
