@@ -5,6 +5,7 @@ import Hamburger from "./Hamburger";
 import { CgProfile } from "react-icons/cg";
 import { AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai";
 import LoginCard from "./LoginCard";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [islogin, setIslogin] = useState(false);
@@ -17,7 +18,7 @@ const Header = () => {
         <img className="brandLogo" alt="logo" src={brandLogo} />
         <div className="right-section">
           {/* <div className="cart"><AiOutlineShoppingCart style={{ height: "25px", width: "25px" }} /><span>0</span></div> */}
-          <div className="cart"><AiOutlineShoppingCart style={{ height: "25px", width: "25px", cursor: 'pointer' }} /></div>
+          <div className="cart"><Link to="/cart"><AiOutlineShoppingCart style={{ height: "25px", width: "25px", cursor: 'pointer', color: "#000000" }} /></Link></div>
           <AiOutlineHeart style={{ height: "25px", width: "25px", cursor: 'pointer' }} />
           <CgProfile
             onClick={() => setIslogin(!islogin)}

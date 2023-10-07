@@ -89,8 +89,8 @@ const SignUp = () => {
           <div className="bottom">
             <h5>Don't have an account?</h5>
             <span>
-              <Link to="/signup" style={{ textDecoration: "none", color: '#0083b0' }}>
-                Signup
+              <Link to="/login" style={{ textDecoration: "none", color: '#0083b0' }}>
+                SignIn
               </Link>
             </span>
           </div>

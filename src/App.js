@@ -6,6 +6,7 @@ import Header from './components/Header';
 import ProductPage from './components/ProductPage';
 import Login from './components/LoginSignUp/Login';
 import SignUp from './components/LoginSignUp/SignUp';
+import CartPage from './components/CartPage';
 
 function App() {
   const AppLayout = () => {
@@ -36,6 +37,10 @@ function App() {
       {
         path: "/signup", 
         element: <SignUp />,
+      },
+      {
+        path: "/cart",
+        element: <CartPage />,
       }
     ]
   }])

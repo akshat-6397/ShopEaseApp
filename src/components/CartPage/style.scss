@@ -1,0 +1,18 @@
+.cart-page{
+    padding-top: 60px;
+    background-color: #f4f4f5;
+    height: 100vh;
+
+    .cart-header{
+        width: 100%;
+        background-color: #ffffff;
+        justify-content: center;
+        display: flex;
+        height: 50px;
+        font-size: 20px;
+        align-items: center;
+        text-transform: capitalize;
+        color: #0083b0;
+        font-weight: bold;
+    }
+}
