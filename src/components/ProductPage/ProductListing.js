@@ -3,8 +3,10 @@ import "./style.scss";
 import { BsSearch } from "react-icons/bs";
 import Dropdown from "./Dropdown";
 import Card from "./Card";
+import data from "../../utils/data.json";
 
-const ProductListing = () => {
+const ProductListing = ({filteredData}) => {
+  console.log(filteredData, "aaa");
   return (
     <div className="product-listing">
       <div className="top-component">
@@ -16,21 +18,7 @@ const ProductListing = () => {
         <Dropdown />
       </div>
       <div className="cards">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {filteredData?.length>0 && filteredData?.map((item) => <Card data={item} key={item?.id}/>)}
       </div>
     </div>
   );

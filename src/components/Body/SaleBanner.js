@@ -6,7 +6,7 @@ const SaleBanner = () => {
   const [hour, setHours] = useState(0);
   const [min, setMins] = useState(0);
   const [sec, setSec] = useState(0);
-  const deadline = new Date("November 7, 2023 00:00:00").getTime();
+  const deadline = new Date("December 20, 2023 00:00:00").getTime();
 
   useEffect(() => {
     const interval = setInterval(() => getTime(), 1000);
