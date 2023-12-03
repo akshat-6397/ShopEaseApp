@@ -307,7 +307,8 @@
     }
     width: 100vw;
     .hidden-view {
-        width: 100vw;;
+        width: 100vw;
+        z-index: 999;
       margin-bottom: 0;
       position: fixed;
       bottom: 0;

@@ -20,7 +20,7 @@ const  Card = ({data}) => {
             <p>{data?.name}</p>
             <div className='card-label'>
                 <div className='strike-text'>
-                    <span>{data?.discountedPrice}</span>
+                    <span>₹{data?.discountedPrice}</span>
                     <s style={{opacity: '0.7'}}>{data?.price}</s>
                 </div>
                 <label>({data?.discountPercentage} OFF)</label>

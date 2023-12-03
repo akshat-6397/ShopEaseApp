@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import "./style.scss";
-import FiltersSection from './FiltersSection';
-import ProductListing from './ProductListing';
-import MobileFilterSection from './MobileFilterSection';
-import useIsMobile from '../../utils/useIsMobile';
+import FiltersSection from "./FiltersSection";
+import ProductListing from "./ProductListing";
+import MobileFilterSection from "./MobileFilterSection";
+import useIsMobile from "../../utils/useIsMobile";
 import data from "../../utils/data.json";
 
 const ProductPage = () => {
@@ -13,12 +13,24 @@ const ProductPage = () => {
     setFilteredData(data);
   }, []);
   return (
-    <div className='product-page'>
-        {!isMobile?<FiltersSection setFilteredData={setFilteredData} data={data} filteredData={filteredData}/>:null}
-        <ProductListing filteredData={filteredData}/>
-        {isMobile?<MobileFilterSection />:null}
+    <div className="product-page">
+      {!isMobile ? (
+        <FiltersSection
+          setFilteredData={setFilteredData}
+          data={data}
+          filteredData={filteredData}
+        />
+      ) : null}
+      <ProductListing filteredData={filteredData} />
+      {isMobile ? (
+        <MobileFilterSection
+          setFilteredData={setFilteredData}
+          data={data}
+          filteredData={filteredData}
+        />
+      ) : null}
     </div>
-  )
-}
+  );
+};
 
 export default ProductPage;

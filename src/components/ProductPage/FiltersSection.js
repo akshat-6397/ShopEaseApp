@@ -3,18 +3,43 @@ import "./style.scss";
 
 const FiltersSection = ({ setFilteredData, data, filteredData }) => {
   const [selectedCategories, setSelectedCategories] = useState([]);
+  const [range, setRange] = useState(500);
+
   useEffect(() => {
     if (selectedCategories.length === 0) {
-      setFilteredData(data);
+      setFilteredData(
+        data.filter(
+          (item) => Number(item?.discountedPrice.replace(/,/g, "")) <= range
+        )
+      );
     } else {
       setFilteredData(
-        data.filter((item) => selectedCategories.includes(item.category))
+        data.filter(
+          (item) =>
+            Number(item?.discountedPrice.replace(/,/g, "")) <= range &&
+            selectedCategories.includes(item?.category)
+        )
       );
     }
-  }, [selectedCategories]);
+  }, [range, selectedCategories]);
+
+  const handleRangeChange = (e) => {
+    setRange(e.target.value);
+    setFilteredData(
+      filteredData.filter(
+        (item) => Number(item?.discountedPrice.replace(/,/g, "")) <= range
+      )
+    );
+  };
+
   const handleCheckboxChange = (e) => {
-    if (selectedCategories.length>0 && selectedCategories.includes(e.target.value)) {
-      setSelectedCategories(selectedCategories.filter((item) => item !== e.target.value));
+    if (
+      selectedCategories.length > 0 &&
+      selectedCategories.includes(e.target.value)
+    ) {
+      setSelectedCategories(
+        selectedCategories.filter((item) => item !== e.target.value)
+      );
     } else {
       setSelectedCategories([...selectedCategories, e.target.value]);
     }
@@ -62,10 +87,16 @@ const FiltersSection = ({ setFilteredData, data, filteredData }) => {
         <h4>PRICE</h4>
         <div className="price-range">
           <span>500</span>
-          <span>5000</span>
-          <span>10000</span>
+          <span>1250</span>
+          <span>2500</span>
         </div>
-        <input type="range" value={5000} min={500} max={10000} />
+        <input
+          type="range"
+          value={range}
+          onChange={(e) => handleRangeChange(e)}
+          min={500}
+          max={2500}
+        />
       </div>
       <hr />
       <div className="bottom">
