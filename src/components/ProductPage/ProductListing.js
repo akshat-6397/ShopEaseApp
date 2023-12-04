@@ -5,14 +5,14 @@ import Dropdown from "./Dropdown";
 import Card from "./Card";
 import data from "../../utils/data.json";
 
-const ProductListing = ({ filteredData }) => {
+const ProductListing = ({ filteredData, handleSearchChange}) => {
   return (
     <div className="product-listing">
       <div className="top-component">
         <h3>SHOPEASE FASHION STORE</h3>
         <div className="search-bar">
           <BsSearch style={{ position: "absolute", left: "8" }} />
-          <input type="text" placeholder="Search For Products" />
+          <input type="text" placeholder="Search For Products" onChange={(e) => handleSearchChange(e)} />
         </div>
         <Dropdown />
       </div>

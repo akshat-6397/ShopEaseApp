@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./style.scss";
 
-const FiltersSection = ({ setFilteredData, data, filteredData }) => {
-  const [selectedCategories, setSelectedCategories] = useState([]);
-  const [range, setRange] = useState(500);
+const FiltersSection = ({ setFilteredData, data, filteredData, selectedCategories, setSelectedCategories, range, setRange, handleClearAll }) => {
 
   useEffect(() => {
     if (selectedCategories.length === 0) {
@@ -49,7 +47,7 @@ const FiltersSection = ({ setFilteredData, data, filteredData }) => {
     <div className="filter-section">
       <div className="top">
         <h3>FILTERS</h3>
-        <button>Clear All</button>
+        <button onClick={handleClearAll}>Clear All</button>
       </div>
       <hr></hr>
       <div className="middle">

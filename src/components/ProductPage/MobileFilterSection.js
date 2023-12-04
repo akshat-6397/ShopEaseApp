@@ -5,7 +5,7 @@ import {
 } from "react-icons/bs";
 import FiltersSection from "./FiltersSection";
 
-const MobileFilterSection = ({ setFilteredData, data, filteredData }) => {
+const MobileFilterSection = ({ setFilteredData, data, filteredData, selectedCategories, setSelectedCategories, range, setRange, handleClearAll }) => {
   const [openFilter, setOpenFilter] = useState(false);
   const handleButtonClick = () => {
     setOpenFilter(!openFilter);
@@ -17,6 +17,11 @@ const MobileFilterSection = ({ setFilteredData, data, filteredData }) => {
           setFilteredData={setFilteredData}
           data={data}
           filteredData={filteredData}
+          selectedCategories={selectedCategories}
+          setSelectedCategories={setSelectedCategories}
+          range={range}
+          handleClearAll={handleClearAll}
+          setRange={setRange}
         />
       )}
       <div className="hidden-view">
