@@ -11,10 +11,14 @@ const ProductPage = () => {
   const [filteredData, setFilteredData] = useState([]);
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [range, setRange] = useState(500);
+  const [rating, setRating] = useState(null);
   
   useEffect(() => {
     setFilteredData(data);
   }, []);
+  useEffect(() => {
+    handleFilterChange();
+  }, [selectedCategories, range, rating])
 
   const handleSearchChange = (e) => {
     if(e.target.value.length > 0){
@@ -37,10 +41,47 @@ const ProductPage = () => {
       }
     }
   }
+
+  const handleRatingChange = (e) => {
+    setRating(e.target.value);
+  }
+
+  const handleFilterChange = () => {
+    if(selectedCategories.length > 0){
+      if(range === 500){
+        if(rating === null){
+          setFilteredData(data?.filter((item) => selectedCategories.includes(item?.category)));
+        }else{
+          setFilteredData(data?.filter((item) => selectedCategories.includes(item?.category) && Number(item?.ratings) >= Number(rating)));
+        }
+      }else{
+        if(rating === null){
+          setFilteredData(data?.filter((item) => selectedCategories.includes(item?.category) && Number(item?.discountedPrice.replace(/,/g, "")) <= range));
+        }else{
+          setFilteredData(data?.filter((item) => selectedCategories.includes(item?.category) && Number(item?.ratings) >= Number(rating) && Number(item?.discountedPrice.replace(/,/g, "")) <= range));
+        }
+      }
+    }else{
+      if(range === 500){
+        if(rating === null){
+          setFilteredData(data);
+        }else{
+          setFilteredData(data?.filter((item) => Number(item?.ratings) >= Number(rating)));
+        }
+      }else{
+        if(rating === null){
+          setFilteredData(data?.filter((item) => Number(item?.discountedPrice.replace(/,/g, "")) <= range));
+        }else{
+          setFilteredData(data?.filter((item) => Number(item?.ratings) >= Number(rating) && Number(item?.discountedPrice.replace(/,/g, "")) <= range));
+        }
+      }
+    }
+  };
   const handleClearAll = () => {
     setSelectedCategories([]);
     setFilteredData(data);
     setRange(500);
+    setRating(null);
   }
   return (
     <div className="product-page">
@@ -54,6 +95,7 @@ const ProductPage = () => {
           range={range}
           setRange={setRange}
           handleClearAll = {handleClearAll}
+          handleRatingChange={handleRatingChange}
         />
       ) : null}
       <ProductListing filteredData={filteredData} handleSearchChange={handleSearchChange}/>

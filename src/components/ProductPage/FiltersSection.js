@@ -1,33 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./style.scss";
 
-const FiltersSection = ({ setFilteredData, data, filteredData, selectedCategories, setSelectedCategories, range, setRange, handleClearAll }) => {
+const FiltersSection = ({ setFilteredData, data, filteredData, selectedCategories, setSelectedCategories, range, setRange, handleClearAll, handleRatingChange }) => {
 
-  useEffect(() => {
-    if (selectedCategories.length === 0) {
-      setFilteredData(
-        data.filter(
-          (item) => Number(item?.discountedPrice.replace(/,/g, "")) <= range
-        )
-      );
-    } else {
-      setFilteredData(
-        data.filter(
-          (item) =>
-            Number(item?.discountedPrice.replace(/,/g, "")) <= range &&
-            selectedCategories.includes(item?.category)
-        )
-      );
-    }
-  }, [range, selectedCategories]);
 
   const handleRangeChange = (e) => {
     setRange(e.target.value);
-    setFilteredData(
-      filteredData.filter(
-        (item) => Number(item?.discountedPrice.replace(/,/g, "")) <= range
-      )
-    );
+    // setFilteredData(
+    //   filteredData.filter(
+    //     (item) => Number(item?.discountedPrice.replace(/,/g, "")) <= range
+    //   )
+    // );
   };
 
   const handleCheckboxChange = (e) => {
@@ -100,19 +83,19 @@ const FiltersSection = ({ setFilteredData, data, filteredData, selectedCategorie
       <div className="bottom">
         <h4>RATINGS</h4>
         <div className="rating">
-          <input type="radio" name="rating" />
+          <input type="radio" name="rating" value="4" onClick={(e) => handleRatingChange(e)}/>
           <span>4 stars and above</span>
         </div>
         <div className="rating">
-          <input type="radio" name="rating" />
+          <input type="radio" name="rating" value="3" onClick={(e) => handleRatingChange(e)}/>
           <span>3 stars and above</span>
         </div>
         <div className="rating">
-          <input type="radio" name="rating" />
+          <input type="radio" name="rating" value="2" onClick={(e) => handleRatingChange(e)}/>
           <span>2 stars and above</span>
         </div>
         <div className="rating">
-          <input type="radio" name="rating" />
+          <input type="radio" name="rating" value="1" onClick={(e) => handleRatingChange(e)}/>
           <span>1 stars and above</span>
         </div>
       </div>
